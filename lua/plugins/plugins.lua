@@ -1,12 +1,10 @@
 return {
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
-
+  { "catppuccin/nvim",    name = "catppuccin", priority = 1000 },
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "catppuccin",
     },
   },
 
@@ -74,7 +72,7 @@ return {
       init = function()
         require("lazyvim.util").lsp.on_attach(function(_, buffer)
           -- stylua: ignore
-          vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
+          vim.keymap.set("n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
           vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
         end)
       end,
@@ -220,7 +218,7 @@ return {
         lsp_format = "fallback",
       },
       -- Set up format-on-save
-      format_on_save = { timeout_ms = 500 },
+      -- format_on_save = { timeout_ms = 500 },
       -- Customize formatters
       formatters = {
         shfmt = {
