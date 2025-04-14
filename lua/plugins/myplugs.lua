@@ -7,7 +7,7 @@ return {
     },
 
     -- disable trouble
-    { "folke/trouble.nvim", enabled = false },
+    { "folke/trouble.nvim",          enabled = false },
 
     -- override nvim-cmp and add cmp-emoji
     {
@@ -104,6 +104,7 @@ return {
             vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
         end,
     },
-    { "catppuccin/nvim",    name = "catppuccin", priority = 1000 },
+    { "catppuccin/nvim",             name = "catppuccin", priority = 1000 },
+    { "JuliaEditorSupport/julia-vim" }
 
 }
