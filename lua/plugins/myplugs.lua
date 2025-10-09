@@ -51,7 +51,7 @@ return {
     },
     -- add any tools you want to have installed below
     {
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
         opts = {
             ensure_installed = {
                 "stylua",
@@ -105,6 +105,14 @@ return {
         end,
     },
     { "catppuccin/nvim",             name = "catppuccin", priority = 1000 },
-    { "JuliaEditorSupport/julia-vim" }
+    { "JuliaEditorSupport/julia-vim" },
+    {
+        "hedyhli/markdown-toc.nvim",
+        ft = "markdown", -- Lazy load on markdown filetype
+        cmd = { "Mtoc" }, -- Or, lazy load on "Mtoc" command
+        opts = {
+            -- Your configuration here (optional)
+        },
+    },
 
 }
